@@ -1,7 +1,8 @@
+<!-- 继承layout -->
 {% extends "../_layout/defalutLayout.html" %}
 
 {% block content %}
-  <!-- 引入公共模块 -->
+  <!-- 引入component -->
   {% include "../_component/header.html" %}
 
   <link rel="stylesheet" href="/public/css/home.css" />
@@ -16,9 +17,9 @@
       <div class="name">
         评分：
         {% if item.ratingFinal == '-1' %}
-        暂未上映
+          暂未上映
         {% else %}
-        {{ item.ratingFinal }}
+          {{ item.ratingFinal }}
         {% endif %}
       </div>
     </div>
