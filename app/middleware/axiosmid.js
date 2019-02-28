@@ -35,7 +35,7 @@ axios.interceptors.response.use(
   }
 )
 
-// const _req = (url, data = {}, params = {}, method = 'POST') => {
+// const _axios = (url, data = {}, params = {}, method = 'POST') => {
 //   const config = {
 //     baseURL: BASE_URL,
 //     method: method,

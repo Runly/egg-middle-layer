@@ -7,11 +7,8 @@ class HomeController extends Controller {
     console.time('total')
 
     let config = {
-      method: 'POST',
-      url: 'https://api.paixin.com/user/detail',
-      data: {
-        user_id: '254535'
-      }
+      method: 'GET',
+      url: 'https://api-m.mtime.cn/PageSubArea/HotPlayMovies.api?locationId=290'
     }
 
     try {
@@ -19,9 +16,9 @@ class HomeController extends Controller {
       let res = await this.ctx.axios(config)
       console.timeEnd('request')
 
-      if (res.data.out == '1') {
+      if (res.status == '200') {
         console.time('render')
-        await this.ctx.render('home/index.html', { avatar: res.data.data.avatar });
+        await this.ctx.render('home/index.html', { list: res.data.movies });
         console.timeEnd('render')
       } else {
         this.ctx.body = res.data.msg

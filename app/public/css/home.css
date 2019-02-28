@@ -1,3 +1,32 @@
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 40px 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+  width: 1200px;
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.item {
+  width: 284px;
+  padding: 0 8px;
+  margin-bottom: 30px;
+}
+
+.name {
+  margin: 10px 0 0 0;
+}
+
 img {
-  width: 500px;
+  width: 100% !important;
+  height: 450px !important;
+  object-fit: fill !important;
 }

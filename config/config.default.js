@@ -16,7 +16,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1551148327620_7926';
 
   // add your middleware config here
-  config.middleware = [ 'req' ];
+  config.middleware = [ 'axiosmid' ];
 
   config.view = {
     defaultViewEngine: 'nunjucks',

@@ -1,1 +1,3 @@
-console.log('home')
+function toMovieDetial(id) {
+  console.log(id)
+}
