@@ -1,13 +1,17 @@
 <html>
 
 <head>
-  <title>egg-sample</title>
+  <title>egg sample</title>
+  <link rel="icon" href="/public/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/public/css/reset.css" />
+  {% block style %}
+  {% endblock %}
 </head>
 
 <body>
-  <!-- 占位 名称为content的block将放在此处 -->
   {% block content %}
+  {% endblock %}
+  {% block script %}
   {% endblock %}
 </body>
 
