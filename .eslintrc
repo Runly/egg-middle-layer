@@ -9,6 +9,8 @@
     "eqeqeq": 0,
     "object-shorthand": 0,
     "prefer-const": 0,
-    "strict": 0
+    "strict": 0,
+    "array-bracket-spacing": 0,
+    "eol-last": 0
   }
 }

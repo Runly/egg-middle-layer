@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const BASE_URL = 'https://api.paixin.com'
+const BASE_URL = 'https://api.sample.com'
 
 axios.interceptors.request.use(
   config => {
