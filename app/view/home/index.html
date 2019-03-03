@@ -1,7 +1,8 @@
 <!-- 继承layout -->
 {% extends "../_layout/defalutLayout.html" %}
 
-{% block style %}
+<!-- 引入css或js -->
+{% block style_or_script %}
  <link rel="stylesheet" href="/public/css/header.css" />
  <link rel="stylesheet" href="/public/css/home.css" />
 {% endblock %}
@@ -30,6 +31,7 @@
   </div>
 {% endblock %}
 
+<!-- 引入js -->
 {% block script %}
   <script type="text/javascript" src="/public/js/home.js"></script>
 {% endblock %}
