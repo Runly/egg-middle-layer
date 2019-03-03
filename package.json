@@ -13,22 +13,31 @@
     "egg-view-nunjucks": "^2.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
+    "del": "^3.0.0",
     "egg-bin": "^4.11.0",
     "egg-ci": "^1.11.0",
     "egg-mock": "^3.21.0",
     "eslint": "^5.13.0",
     "eslint-config-egg": "^7.1.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0",
     "webstorm-disable-index": "^1.2.0"
   },
   "engines": {
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-egg-sample --port=8080",
+    "start": "egg-scripts start --daemon --title=egg-server-egg-sample --port=8080 & node_modules/gulp/bin/gulp.js build",
     "stop": "egg-scripts stop --title=egg-server-egg-sample",
-    "dev": "egg-bin dev --port=8080",
+    "dev": "egg-bin dev --port=8080 & node_modules/gulp/bin/gulp.js dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
