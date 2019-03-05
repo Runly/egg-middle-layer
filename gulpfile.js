@@ -10,7 +10,7 @@ const uglify = require('gulp-uglify')
 sass.compiler = require('node-sass')
 
 gulp.task('script_dev', function () {
-  return gulp.src('app/assets/js/*.js')
+  return gulp.src('app/view/_assets/js/*.js')
     .pipe(babel({
       presets: ['@babel/env']
     }))
@@ -18,7 +18,7 @@ gulp.task('script_dev', function () {
 })
 
 gulp.task('script', function () {
-  return gulp.src('app/assets/js/*.js')
+  return gulp.src('app/view/_assets/js/*.js')
     .pipe(babel({
       presets: ['@babel/env']
     }))
@@ -27,7 +27,7 @@ gulp.task('script', function () {
 })
 
 gulp.task('style_dev', function () {
-  return gulp.src('app/assets/css/*.scss')
+  return gulp.src('app/view/_assets/css/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -37,7 +37,7 @@ gulp.task('style_dev', function () {
 })
 
 gulp.task('style', function () {
-  return gulp.src('app/assets/css/*.scss')
+  return gulp.src('app/view/_assets/css/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -48,14 +48,14 @@ gulp.task('style', function () {
 })
 
 gulp.task('auto_dev', function () {
-  let styleWatcher = gulp.watch('app/assets/css/*.scss', gulp.series('style_dev'))
+  let styleWatcher = gulp.watch('app/view/_assets/css/*.scss', gulp.series('style_dev'))
 
   // 在删除scss文件时，删除对应css的文件
   styleWatcher.on('unlink', function (filePath) {
     del('app/public/css/' + path.basename(filePath, '.scss') + '.css')
   })
 
-  let scriptWatcher = gulp.watch('app/assets/js/*.js', gulp.series('script_dev'))
+  let scriptWatcher = gulp.watch('app/view/_assets/js/*.js', gulp.series('script_dev'))
 
   scriptWatcher.on('unlink', function (filePath) {
     del('app/public/js/' + path.basename(filePath, '.js') + '.js');
@@ -63,14 +63,14 @@ gulp.task('auto_dev', function () {
 })
 
 gulp.task('auto', function () {
-  let styleWatcher = gulp.watch('app/assets/css/*.scss', gulp.series('style'))
+  let styleWatcher = gulp.watch('app/view/_assets/css/*.scss', gulp.series('style'))
 
   // 在删除scss文件时，删除对应css的文件
   styleWatcher.on('unlink', function (filePath) {
     del('app/public/css/' + path.basename(filePath, '.scss') + '.css')
   })
 
-  let scriptWatcher = gulp.watch('app/assets/js/*.js', gulp.series('script'))
+  let scriptWatcher = gulp.watch('app/view/_assets/js/*.js', gulp.series('script'))
 
   scriptWatcher.on('unlink', function (filePath) {
     del('app/public/js/' + path.basename(filePath, '.js') + '.js');

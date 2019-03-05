@@ -3,13 +3,12 @@
 
 <!-- 引入css或js -->
 {% block style_or_script %}
- <link rel="stylesheet" href="/public/css/header.css" />
  <link rel="stylesheet" href="/public/css/home.css" />
 {% endblock %}
 
 {% block content %}
 <!-- 引入component -->
-{% include "../_component/header.html" %}
+{% include "../_component/header/index.html" %}
 
   <div class="title">Sample</div>
 
