@@ -1,5 +1,5 @@
 {
-  "name": "egg-sample",
+  "name": "egg-middle-layer",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -37,8 +37,8 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-egg-sample --port=8080 & node_modules/gulp/bin/gulp.js build",
-    "stop": "egg-scripts stop --title=egg-server-egg-sample",
+    "start": "egg-scripts start --daemon --title=egg-server-egg-middle-layer --port=8080 & node_modules/gulp/bin/gulp.js build",
+    "stop": "egg-scripts stop --title=egg-server-egg-middle-layer",
     "dev": "egg-bin dev --port=8080 & node_modules/gulp/bin/gulp.js dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
